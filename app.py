@@ -8,7 +8,7 @@ from tensorflow.keras.models import load_model
 # Load model, scaler, columns
 @st.cache_resource
 def create_model():
-    return joblib.load('D:/University/ІФНТУНГ/3C/ІнноваціїОсновіШтучногоІнтелекту/ЛР4/CarPricePrediction-main/NY_model_pipeline.joblib')
+    return joblib.load('NY_model_pipeline.joblib')
     
 
 loaded_pipeline = create_model()
@@ -82,5 +82,6 @@ if st.button("Визначити ціну"):
 
 if st.session_state.prediction is not None:
     st.markdown(f"**Орієнтовна ціна будинку:** ${st.session_state.prediction:,.2f}")
+
 
 st.caption("Варто зауважити, що модель може поводити себе в деяких випадках нелогічно, однак це проблема її навчання та якості. Вебзастосунок працює коректно та без збоїв.")
