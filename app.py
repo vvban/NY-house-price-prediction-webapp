@@ -18,10 +18,10 @@ st.title("Передбачення ціни на будинок в Нью-Йор
 house_type = st.selectbox(
     "Type",
     [
-    "Condo for sale (Спільне володіння та управління однією територією)",
-    "House for sale (Будинок на продаж)",
-    "Co-op for sale (Житло у кооперативі на продаж)",
-    "Multi-family home for sale (Багатоквартирний будинок на продаж)"
+    "Condo for sale",
+    "House for sale",
+    "Co-op for sale",
+    "Multi-family home for sale"
     ]
 )
 beds = st.slider(
@@ -85,3 +85,4 @@ if st.session_state.prediction is not None:
 
 
 st.caption("Варто зауважити, що модель може поводити себе в деяких випадках нелогічно, однак це проблема її навчання та якості. Вебзастосунок працює коректно та без збоїв.")
+
